@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HomeComponent } from './component/home/home.component';
 import { ArticleComponent } from './component/article/article.component';
 import { AppComponent } from './app.component';
-
+import { ArticleCategoryComponent } from './component/article-category/article-category.component';
 
 
 
@@ -14,6 +14,7 @@ import { AppComponent } from './app.component';
     AppComponent,
     ArticleComponent,
     HomeComponent,
+    ArticleCategoryComponent,
    ],
   imports: [
     BrowserModule,
