@@ -15,7 +15,7 @@
             <td><button style="width:100%;"class="btn btn-light btn btn-outline-secondary"  routerLink="/products">Tout</button></td>
           </tr>
           <tr *ngFor="let cat of category;">
-            <td> <button style="width:100%;"class="btn btn-light btn btn-outline-secondary"  routerLink="/article_category" >{{cat.name}}</button></td>
+            <td> <button style="width:100%;"class="btn btn-light btn btn-outline-secondary"  routerLink="/article_category" (click)=filter_product(cat.id)>{{cat.name}}</button></td>
           </tr>
         </tbody>
       </table>
@@ -35,11 +35,11 @@
                   <p class="card-text text-center text-capitalize"  >{{product.name}}   {{product.price}} €</p>
                  <div class=" text-center ">
 
-                    <select   >
+                    <select    [(ngModel)]='selectedOption'  >
                         <option  *ngFor='let in of counter(50) ;let i = index '  [id]=i+1 [value]=i+1>{{i+1}}</option>
                     </select>
 
-                    <button class="btn btn-primary" (style="margin-left:10px;">  Ajouter au panier</button>
+                    <button class="btn btn-primary" style="margin-left:10px;">  Ajouter au panier</button>
                     <i class="fa fa-shopping-cart" aria-hidden="true"></i>
 
             </div>

@@ -17,7 +17,7 @@ export class ArticleComponent implements OnInit {
   category:any;
   compteur: any[]  = [];
   quantity_number: any[]  = [];
-
+  selectedOption : number =1;
   api_link : string='http://127.0.0.1:8000/api';
 
   nmbr_article(){
@@ -58,5 +58,12 @@ export class ArticleComponent implements OnInit {
     });
 
   }
+  filter_product(category : any){
+    console.log(category)
+    sessionStorage.setItem('category', category);
+  }
 
+  getData(){
+    return sessionStorage.getItem('category');
+  }
 }
