@@ -14,3 +14,9 @@ class ProductSerializer(ModelSerializer):
             "image",
             "available_on_website",
         ]
+
+
+class ProductCategorySerializer(ModelSerializer):
+    class Meta:
+        model = ProductCategory
+        fields = ["id", "name", "available_on_website"]

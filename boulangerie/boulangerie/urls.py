@@ -19,9 +19,11 @@ from django.conf import settings
 from django.contrib import admin
 from .views import (
     ProductAPIView,
+    ProductCategoryAPIView,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("api/product", ProductAPIView.as_view()),
+    path("api/productcategory", ProductCategoryAPIView.as_view()),
 ]
