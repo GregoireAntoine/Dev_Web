@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, subscribeOn } from 'rxjs';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
-
+import { CartService } from 'src/app/service/cart.service';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -30,7 +30,7 @@ export class ArticleCategoryComponent implements OnInit {
   counter(i: number) {
     return new Array(i);
 }
-  constructor(private http:HttpClient ) {
+  constructor(private http:HttpClient , private cartService : CartService) {
 
   }
 
@@ -70,6 +70,10 @@ export class ArticleCategoryComponent implements OnInit {
 
   }
 
+  addtocart(item: any ,quantity: number){
+    this.cartService.addtoCart(item,quantity);
+    this.selectedOption=1
+  }
 
   filter_product(category : any){
 
