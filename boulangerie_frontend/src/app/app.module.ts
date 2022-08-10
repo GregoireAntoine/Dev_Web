@@ -6,7 +6,9 @@ import { AppComponent } from './app.component';
 import { ArticleCategoryComponent } from './component/article-category/article-category.component';
 import { CartComponent } from './component/cart/cart.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { DateorderComponent } from './component/dateorder/dateorder.component';
+import { FormsModule } from '@angular/forms';
+import { NgxHorizontalTimelineModule } from 'ngx-horizontal-timeline';
 
 @NgModule({
 
@@ -16,11 +18,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     HomeComponent,
     ArticleCategoryComponent,
     CartComponent,
-
+    DateorderComponent
    ],
   imports: [
     BrowserModule,
     NgbModule,
+    FormsModule,
+    NgxHorizontalTimelineModule
   ],
 
   bootstrap: [AppComponent]
